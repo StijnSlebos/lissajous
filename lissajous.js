@@ -66,11 +66,11 @@ shape.prototype.drawshape = function(){
 }
 
 shape.prototype.update = function(){
-this.pixelPosition.x = map(this.position.x, -1, 1, imageCenter.x-imageSquare/2+imageOffset, imageCenter.x+imageSquare/2-imageOffset);
-this.pixelPosition.y = map(this.position.y, -1, 1,  imageCenter.y-imageSquare/2+imageOffset, imageCenter.y+imageSquare/2-imageOffset);
-
 this.position.x = sin(this.alpha.x * this.time);
 this.position.y = cos(this.alpha.y * this.time);
+	
+this.pixelPosition.x = map(this.position.x, -1, 1, imageCenter.x-imageSquare/2+imageOffset, imageCenter.x+imageSquare/2-imageOffset);
+this.pixelPosition.y = map(this.position.y, -1, 1,  imageCenter.y-imageSquare/2+imageOffset, imageCenter.y+imageSquare/2-imageOffset);
 
 this.time += 0.02;
 }
