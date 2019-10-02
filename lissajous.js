@@ -77,7 +77,7 @@ if(start < stop){
     return output -= step;
   }else if(output >= stop - step || output <= stop + step){
     return stop;
-  }return output;
+  }else return output;
 }
 
 shape.prototype.update = function() {
