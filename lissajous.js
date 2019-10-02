@@ -17,9 +17,9 @@ function setup() {
     }
   }
 
-
   lissajous = new shape();
 }
+
 
 
 function draw() {
